@@ -26,19 +26,19 @@ function draw() {
   stroke(0);
   fill(255);
 
-  if (x1 < mouseX && y1 < mouseY) {
+  if (x1 < wid/2 && y1 < hei/2) {
     speed1x += speedm;
     speed1y += 0.01;
     
-  } else if (x1 > mouseX && y1 < mouseY) {
+  } else if (x1 > wid/2 && y1 < hei/2) {
     speed1x -= speedm;
     speed1y += speedm;
 
-  } else if (x1 > mouseX && y1 > mouseY) {
+  } else if (x1 > wid/2 && y1 > hei/2) {
     speed1x -= speedm;
     speed1y -= speedm;
 
-  } else if (x1 < mouseX && y1 > mouseY) {
+  } else if (x1 < wid/2 && y1 > hei/2) {
     speed1x += speedm;
     speed1y -= speedm;
 
@@ -72,8 +72,8 @@ function draw() {
   ellipse(x2, y2, 10)
 
   a++;
-  wid -= 0.01;
-  hei -= 0.01;
+//   wid -= 0.01;
+//   hei -= 0.01;
   // if (frameCount % 200 == 0){
   // 	speedm = -speedm;
   // }
