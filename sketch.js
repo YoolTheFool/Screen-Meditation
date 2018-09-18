@@ -26,19 +26,19 @@ function draw() {
   stroke(0);
   fill(255);
 
-  if (x1 < wid/2 && y1 < hei/2) {
+  if (x1 < mouseX && y1 < mouseY) {
     speed1x += speedm;
     speed1y += 0.01;
     
-  } else if (x1 > wid/2 && y1 < hei/2) {
+  } else if (x1 > mouseX && y1 < mouseY) {
     speed1x -= speedm;
     speed1y += speedm;
 
-  } else if (x1 > wid/2 && y1 > hei/2) {
+  } else if (x1 > mouseX && y1 > mouseY) {
     speed1x -= speedm;
     speed1y -= speedm;
 
-  } else if (x1 < wid/2 && y1 > hei/2) {
+  } else if (x1 < mouseX && y1 > mouseY) {
     speed1x += speedm;
     speed1y -= speedm;
 
@@ -48,10 +48,10 @@ function draw() {
   x1 += speed1x;
   y1 += speed1y;
   
-  if (x1>width-10 || x1 < 10){
+  if (x1>width+20 || x1 < -20){
   	speed1x = - speed1x;
   }
-  if (y1>height-10 || y1 < 10){
+  if (y1>height+20 || y1 < -20){
   	speed1y = - speed1y;
   }
   
